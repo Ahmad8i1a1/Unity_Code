@@ -1,0 +1,41 @@
+public class CarController : MonoBehaviour {
+    public float acceleration = 10f;
+    public float maxSpeed = 50f;
+    public float braking = 50f;
+    public float turnSpeed = 50f;
+
+    private float currentSpeed = 0f;
+
+    private void Update() {
+        // get input from horizontal axis for turning
+        float turnInput = Input.GetAxis("Horizontal");
+
+        // apply rotation to car
+        transform.Rotate(Vector3.up, turnInput * turnSpeed * Time.deltaTime);
+
+        // get input from vertical axis for acceleration and braking
+        float moveInput = Input.GetAxis("Vertical");
+
+        // apply acceleration or braking to car
+        if (moveInput > 0) {
+            // accelerate
+            currentSpeed += moveInput * acceleration * Time.deltaTime;
+        } else if (moveInput < 0) {
+            // brake
+            currentSpeed += moveInput * braking * Time.deltaTime;
+        } else {
+            // coast
+            if (currentSpeed > 0) {
+                currentSpeed -= braking * Time.deltaTime;
+            } else if (currentSpeed < 0) {
+                currentSpeed += braking * Time.deltaTime;
+            }
+        }
+
+        // clamp current speed to max speed
+        currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);
+
+        // apply movement to car
+        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
+    }
+}
