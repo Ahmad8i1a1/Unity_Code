@@ -1,0 +1,22 @@
+using UnityEngine;
+
+public class SmoothCamera : MonoBehaviour {
+
+    public float smoothSpeed = 5f;
+    public float followDistance = 10f;
+
+    private Transform carTransform;
+
+    void Start() {
+        carTransform = GetComponent<Transform>();
+    }
+
+    void LateUpdate() {
+        // Calculate the desired camera position based on the car's position and the follow distance.
+        Vector3 desiredPosition = carTransform.position + carTransform.up * followDistance;
+
+        // Smoothly move the camera towards the desired position.
+        Vector3 newPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
+        transform.position = newPosition;
+    }
+}
