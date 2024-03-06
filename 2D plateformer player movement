@@ -1,0 +1,38 @@
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    public float speed = 5f;
+    public float jumpForce = 5f;
+    private bool isGrounded;
+    private bool canJump; // Flag to track jump availability
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        canJump = true; // Reset jump availability on start
+    }
+
+    void Update()
+    {
+        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.1f);
+        if (isGrounded)
+        {
+            canJump = true; // Reset jump availability when grounded
+        }
+    }
+
+    void FixedUpdate()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity before jump
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            canJump = false; // Disable jumping until grounded again
+        }
+    }
+}
