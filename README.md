@@ -1,22 +1,35 @@
-# Unity_Code
-#Welcome!
+# Unity Code
 
-This repository serves as a collection of general-purpose Unity scripts commonly used in game development tasks. Whether you're a seasoned developer or just starting out, you'll find various functionalities catered to everyday Unity needs.
+## Description
+Find what you need each file have its own description 
 
-# What's Inside:
+## Features
+unknown
 
-FIND IT
+## Technologies Used
+Unity 3D
 
-# Target Audience:
+## Usage
 
-This repository is primarily aimed at Unity developers of all levels. Whether you're new to Unity and seeking helpful starting points, or an experienced developer looking for reusable components, this collection provides valuable tools for your projects.
+Welcome to our project! Here you'll find everything you need to get started using our software. Whether you're a developer looking to integrate our API into your applications or a researcher exploring our data analysis tools, this section provides clear guidance on how to leverage our project effectively. We've included examples, documentation references, and step-by-step instructions to ensure a smooth experience for all users.
 
-# Contribution:
+If you encounter any issues or have suggestions for improvement, please don't hesitate to reach out via our contact details in the "Contact" section below. Your feedback is invaluable to us as we continue to enhance and expand the capabilities of our project.
 
-Feel free to contribute your own general-purpose Unity scripts to this repository! By sharing your creations, you can help expand the collection and benefit other developers. For contributing, please refer to the CONTRIBUTING.md file for guidelines.
+## Contributing
 
-# Remember:
+We welcome contributions from the community to help improve our project. Whether you're interested in fixing bugs, adding new features, or enhancing documentation, we appreciate your efforts to make our project better for everyone.
 
-While these scripts provide a solid foundation, you may need to modify them to fit your specific project requirements.
-Feel free to experiment and customize the scripts to create unique and engaging gameplay experiences.
-I hope this repository serves as a valuable resource for your Unity development journey!
+To contribute, please follow these guidelines:
+- Fork the repository and create your branch from `main`.
+- Ensure your code adheres to our coding standards and practices.
+- Test your changes thoroughly.
+- Submit a pull request detailing the changes you've made and why they're valuable.
+
+Our team reviews all contributions promptly and provides feedback to ensure high-quality standards are maintained. By contributing to our project, you'll be part of a collaborative effort to drive innovation and excellence in our field.
+
+## License
+
+This project is licensed under the Apache License 2.0. The Apache License 2.0 is a permissive free software license written by the Apache Software Foundation (ASF). It allows users to use the software for any purpose, to distribute it, to modify it, and to distribute modified versions of the software under the terms of the license. However, users must include the original copyright and license notice in any copy of the software/source code that they distribute or modify. For more details about the Apache License 2.0, please refer to the LICENSE file included in the repository or visit the [Apache License 2.0 website](https://www.apache.org/licenses/LICENSE-2.0).
+
+## Contact
+<a href="https://linktr.ee/ahmad_bi1a1" target="_blank" rel="noreferrer"> <img src="https://pbs.twimg.com/profile_images/1545146599474544640/xYvfFLxc_400x400.png" alt="unity" width="40" height="40"/> </a> </p>
